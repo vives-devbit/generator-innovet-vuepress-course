@@ -28,6 +28,12 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'author',
         message: 'Author:'
+      },
+      {
+        type: 'input',
+        name: 'companyWebsite',
+        message: 'Company Website:',
+        default: 'https://www.vives.be'
       }
     ];
 
