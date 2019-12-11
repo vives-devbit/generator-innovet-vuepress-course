@@ -34,6 +34,11 @@ module.exports = class extends Generator {
         name: 'companyWebsite',
         message: 'Company Website:',
         default: 'https://www.vives.be'
+      },
+      {
+        type: 'input',
+        name: 'repoUrl',
+        message: 'GitHub Repo URL:'
       }
     ];
 
