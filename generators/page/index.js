@@ -54,7 +54,7 @@ module.exports = class extends Generator {
     );
     if (!this.fs.exists(this.destinationPath('docs/.vuepress/config.js'))) return;
     const configs = this.fs.read('docs/.vuepress/config.js');
-    const options = ['nav', 'sidebar'];
+    const options = ['sidebar'];
     var output = null;
     for (let option of options) {
       let test = null;
