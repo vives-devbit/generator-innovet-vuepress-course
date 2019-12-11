@@ -1,4 +1,5 @@
-# generator-vuepress 
+# generator-innovet-vuepress-course
+
 <!-- [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/amimaro/generator-vuepress) -->
 
 > Yeoman generator for Innovet VuePress Courses
@@ -33,8 +34,7 @@ npm run docs:dev
 yo vuepress:page
 ```
 
-Creates a `[folder]/README.md` under docs.
-Overwrite the conflicts to persist the theme configurations.
+Creates a `[folder]/README.md` under docs. Overwrite the conflicts to persist the theme configurations.
 
 ## Build
 
@@ -45,7 +45,8 @@ npm run docs:build
 Build generated under `docs/.vuepress/dist`
 
 ## File tree
-```
+
+```bash
 .
 ├── docs
 │   ├── about
@@ -69,15 +70,14 @@ Build generated under `docs/.vuepress/dist`
 
 ## Getting To Know Yeoman
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+* Yeoman has a heart of gold.
+* Yeoman is a person with feelings and opinions, but is very easy to work with.
+* Yeoman can be too opinionated at times but is easily convinced not to be.
+* Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 
 MIT © [VIVES DevBit](https://www.devbit.be)
-
 
 <!-- [npm-image]: https://badge.fury.io/js/generator-vuepress.svg
 [npm-url]: https://npmjs.org/package/generator-vuepress
