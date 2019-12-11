@@ -8,6 +8,9 @@ module.exports = {
     ],
     sidebar: [
       ['/', 'Home'],
-    ]
+    ],
+    repo: '<%= repoUrl %>',
+    docsDir: 'docs',
+    docsBranch: 'master'
   }
 }

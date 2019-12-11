@@ -8,5 +8,17 @@
   },
   "keywords": [],
   "author": "<%= author %>",
-  "license": "MIT"
+  "license": "Creative Commons Attribution-ShareAlike 4.0 International License",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+<%= repoUrl %>"
+  },
+  "bugs": {
+    "url": "<%= repoUrl %>/issues"
+  },
+  "homepage": "<%= repoUrl %>#readme"
 }
