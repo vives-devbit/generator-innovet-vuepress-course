@@ -12,5 +12,10 @@ module.exports = {
     repo: '<%= repoUrl %>',
     docsDir: 'docs',
     docsBranch: 'master'
-  }
+  },
+  markdown: {
+    lineNumbers: true,
+  },
+  serviceWorker: true,
+  plugins: [ ],
 }
