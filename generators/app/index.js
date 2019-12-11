@@ -7,7 +7,7 @@ const to = require('to-case');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to ${chalk.green('generator-vuepress')}!`));
+    this.log(yosay(`Welcome to ${chalk.green('Innovet Vuepress Course generator')}!`));
 
     this.appname = this.appname.replace(/\s+/g, '-');
 
@@ -23,11 +23,6 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Description:',
         default: 'Awesome description'
-      },
-      {
-        type: 'confirm',
-        name: 'scripts',
-        message: 'Add scripts to package.json?'
       }
     ];
 
@@ -50,33 +45,31 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.props.destination}/docs/.vuepress`),
       this.props
     );
-    if (this.props.scripts) {
-      const scripts = {
-        'docs:dev': 'vuepress dev docs',
-        'docs:build': 'vuepress build docs'
-      };
-      if (
-        this.fs.exists(this.destinationPath(`${this.props.destination}/package.json`))
-      ) {
-        let pack = JSON.parse(this.fs.read(`${this.props.destination}/package.json`));
-        if (pack.scripts === undefined) pack.scripts = {};
-        pack.scripts = Object.assign(pack.scripts, scripts);
-        this.fs.write(
-          `${this.props.destination}/package.json`,
-          JSON.stringify(pack, null, 2)
-        );
-      } else {
-        this.fs.write(
-          `${this.props.destination}/package.json`,
-          JSON.stringify(
-            {
-              scripts: scripts
-            },
-            null,
-            2
-          ) + '\n'
-        );
-      }
+    const scripts = {
+      'docs:dev': 'vuepress dev docs',
+      'docs:build': 'vuepress build docs'
+    };
+    if (
+      this.fs.exists(this.destinationPath(`${this.props.destination}/package.json`))
+    ) {
+      let pack = JSON.parse(this.fs.read(`${this.props.destination}/package.json`));
+      if (pack.scripts === undefined) pack.scripts = {};
+      pack.scripts = Object.assign(pack.scripts, scripts);
+      this.fs.write(
+        `${this.props.destination}/package.json`,
+        JSON.stringify(pack, null, 2)
+      );
+    } else {
+      this.fs.write(
+        `${this.props.destination}/package.json`,
+        JSON.stringify(
+          {
+            scripts: scripts
+          },
+          null,
+          2
+        ) + '\n'
+      );
     }
   }
 
