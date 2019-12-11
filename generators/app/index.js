@@ -45,30 +45,11 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.props.destination}/docs/.vuepress`),
       this.props
     );
-    const scripts = {
-      'docs:dev': 'vuepress dev docs',
-      'docs:build': 'vuepress build docs'
-    };
-    if (this.fs.exists(this.destinationPath(`${this.props.destination}/package.json`))) {
-      let pack = JSON.parse(this.fs.read(`${this.props.destination}/package.json`));
-      if (pack.scripts === undefined) pack.scripts = {};
-      pack.scripts = Object.assign(pack.scripts, scripts);
-      this.fs.write(
-        `${this.props.destination}/package.json`,
-        JSON.stringify(pack, null, 2)
-      );
-    } else {
-      this.fs.write(
-        `${this.props.destination}/package.json`,
-        JSON.stringify(
-          {
-            scripts: scripts
-          },
-          null,
-          2
-        ) + '\n'
-      );
-    }
+    this.fs.copyTpl(
+      this.templatePath('core/package.json'),
+      this.destinationPath(`${this.props.destination}/package.json`),
+      this.props
+    );
   }
 
   install() {
