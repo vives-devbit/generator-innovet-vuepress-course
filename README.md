@@ -1,5 +1,7 @@
-# generator-vuepress [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/amimaro/generator-vuepress)
-> Yeoman generator for VuePress
+# generator-vuepress 
+<!-- [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/amimaro/generator-vuepress) -->
+
+> Yeoman generator for Innovet VuePress Courses
 
 ## Installation
 
@@ -8,13 +10,13 @@ First, install [Yeoman](http://yeoman.io) and generator-vuepress using [npm](htt
 ```bash
 npm install -g vuepress
 npm install -g yo
-npm install -g generator-vuepress
+npm install -g generator-innovet-vuepress-course
 ```
 
 Then generate your new project:
 
 ```bash
-yo vuepress
+yo innovet-vuepress-course
 ```
 
 Check out for VuePress Docs [here](https://vuepress.vuejs.org/).
@@ -33,22 +35,6 @@ yo vuepress:page
 
 Creates a `[folder]/README.md` under docs.
 Overwrite the conflicts to persist the theme configurations.
-
-## Generate Component
-
-```bash
-yo vuepress:component
-```
-
-Creates a component under `docs/.vuepress/components`.
-
-## Generate PDF
-
-```bash
-yo vuepress:pdf
-```
-
-Creates a pdf document from the builded project. The sections are sorted by `themeConfig.nav`.
 
 ## Build
 
@@ -90,12 +76,12 @@ Build generated under `docs/.vuepress/dist`
 
 ## License
 
-MIT © [amimaro](amimaro.github.io)
+MIT © [VIVES DevBit](https://www.devbit.be)
 
 
-[npm-image]: https://badge.fury.io/js/generator-vuepress.svg
+<!-- [npm-image]: https://badge.fury.io/js/generator-vuepress.svg
 [npm-url]: https://npmjs.org/package/generator-vuepress
 [travis-image]: https://travis-ci.org/amimaro/generator-vuepress.svg?branch=master
 [travis-url]: https://travis-ci.org/amimaro/generator-vuepress
 [daviddm-image]: https://david-dm.org/amimaro/generator-vuepress.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/amimaro/generator-vuepress
+[daviddm-url]: https://david-dm.org/amimaro/generator-vuepress -->
