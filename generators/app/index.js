@@ -71,6 +71,11 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.props.destination}/.gitignore`),
       this.props
     );
+    this.fs.copyTpl(
+      this.templatePath('core/README.md'),
+      this.destinationPath(`${this.props.destination}/README.md`),
+      this.props
+    );
   }
 
   install() {
