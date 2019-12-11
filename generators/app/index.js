@@ -66,6 +66,11 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.props.destination}/package.json`),
       this.props
     );
+    this.fs.copyTpl(
+      this.templatePath('core/_.gitignore'),
+      this.destinationPath(`${this.props.destination}/.gitignore`),
+      this.props
+    );
   }
 
   install() {
