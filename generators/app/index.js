@@ -23,6 +23,11 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Description:',
         default: 'Awesome description'
+      },
+      {
+        type: 'input',
+        name: 'author',
+        message: 'Author:'
       }
     ];
 

@@ -7,6 +7,6 @@
     "docs:build": "vuepress build docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "<%= author %>",
   "license": "MIT"
 }
