@@ -72,6 +72,14 @@ module.exports = class extends Generator {
     });
   }
 
+  installingZoomPlugin() {
+    this.npmInstall(
+      ['vuepress-plugin-zooming'],
+      { 'save-dev': true },
+      { cwd: this.props.destination }
+    );
+  }
+
   install() {
     if (this.props.repoUrl) {
       this.spawnCommandSync('git', ['init'], { cwd: this.props.destination });
