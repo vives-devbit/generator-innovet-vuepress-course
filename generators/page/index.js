@@ -52,6 +52,11 @@ module.exports = class extends Generator {
       this.destinationPath(`docs/${this.props.pageSlug}/.`),
       this.props
     );
+    this.fs.copyTpl(
+      this.templatePath('./assets/.gitkeep'),
+      this.destinationPath(`docs/${this.props.pageSlug}/assets/.gitkeep`),
+      this.props
+    );
     if (!this.fs.exists(this.destinationPath('docs/.vuepress/config.js'))) return;
     const configs = this.fs.read('docs/.vuepress/config.js');
     const options = ['sidebar'];
