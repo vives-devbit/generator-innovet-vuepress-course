@@ -31,7 +31,7 @@ npm run docs:dev
 ## Generate Page
 
 ```bash
-yo vuepress:page
+yo innovet-vuepress-course:page
 ```
 
 Creates a `[folder]/README.md` under docs. Overwrite the conflicts to persist the theme configurations.
