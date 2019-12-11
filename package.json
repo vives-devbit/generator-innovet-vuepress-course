@@ -8,6 +8,13 @@
     "email": "sille.vanlandschoot@vives.be",
     "url": "https://www.devbit.be"
   },
+  "contributors": [
+    {
+      "name": "Nico De Witte",
+      "email": "nico.dewitte@vives.be",
+      "url": "http://github.com/bioboost"
+    }
+  ],
   "files": [
     "generators"
   ],
