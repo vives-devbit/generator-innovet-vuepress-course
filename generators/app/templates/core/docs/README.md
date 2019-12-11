@@ -11,9 +11,7 @@ meta:
 
 > <%= description %>
 
-<p align="center">
-  <img src="./images/thumbnail-256x256.png" />
-</p>
+![Success](./assets/success.png)
 
 [[toc]]
 
