@@ -5,6 +5,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Company', link: '<%= companyWebsite %>' },
+      { text: 'License', link: '/LICENSE.md' },
     ],
     sidebar: [
       ['/', 'Home'],
