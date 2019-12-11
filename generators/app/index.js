@@ -7,7 +7,7 @@ const to = require('to-case');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to ${chalk.green('Innovet Vuepress Course generator')}!`));
+    this.log(yosay(`Welcome to ${chalk.green('Innovet VuePress Course generator')}!`));
 
     this.appname = this.appname.replace(/\s+/g, '-');
 
@@ -38,13 +38,17 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'repoUrl',
-        message: 'GitHub Repo URL:'
+        message: 'GitHub Repo URL (https://github.com/.....):'
       }
     ];
 
     return this.prompt(prompts).then(props => {
       this.props = props;
       this.props.slugName = to.slug(this.props.projectName);
+      this.props.repoSSH = this.props.repoUrl.replace(
+        'https://github.com/',
+        'git@github.com:'
+      );
       if (this.appname === this.props.projectName) this.props.destination = '.';
       else this.props.destination = this.props.slugName;
     });
@@ -69,6 +73,13 @@ module.exports = class extends Generator {
   }
 
   install() {
+    if (this.props.repoUrl) {
+      this.spawnCommandSync('git', ['init'], { cwd: this.props.destination });
+      this.spawnCommandSync('git', ['remote', 'add', 'origin', `${this.props.repoSSH}`], {
+        cwd: this.props.destination
+      });
+    }
+
     this.log('\n\nSuccessfully Generated!!');
     this.log(`Run ${chalk.green(`npm run docs:dev`)} to start.\n`);
   }
