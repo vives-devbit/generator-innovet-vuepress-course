@@ -51,31 +51,21 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copyTpl(
-      this.templatePath('core/docs'),
-      this.destinationPath(`${this.props.destination}/docs`),
-      this.props
-    );
-    this.fs.copyTpl(
-      this.templatePath('core/docs/.vuepress'),
-      this.destinationPath(`${this.props.destination}/docs/.vuepress`),
-      this.props
-    );
-    this.fs.copyTpl(
-      this.templatePath('core/package.json'),
-      this.destinationPath(`${this.props.destination}/package.json`),
-      this.props
-    );
-    this.fs.copyTpl(
-      this.templatePath('core/_.gitignore'),
-      this.destinationPath(`${this.props.destination}/.gitignore`),
-      this.props
-    );
-    this.fs.copyTpl(
-      this.templatePath('core/README.md'),
-      this.destinationPath(`${this.props.destination}/README.md`),
-      this.props
-    );
+    const toCopy = [
+      { source: 'core/docs', destination: 'docs' },
+      { source: 'core/docs/.vuepress', destination: 'docs/.vuepress' },
+      { source: 'core/package.json', destination: 'package.json' },
+      { source: 'core/_.gitignore', destination: '.gitignore' },
+      { source: 'core/README.md', destination: 'README.md' }
+    ];
+
+    toCopy.forEach(entry => {
+      this.fs.copyTpl(
+        this.templatePath(entry.source),
+        this.destinationPath(`${this.props.destination}/${entry.destination}`),
+        this.props
+      );
+    });
   }
 
   install() {
