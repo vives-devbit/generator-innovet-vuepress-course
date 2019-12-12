@@ -11,7 +11,7 @@ meta:
 
 > <%= description %>
 
-![Success](./assets/success.png)
+<div style="font-size: 10em; text-align: center;">🎉</div>
 
 [[toc]]
 
