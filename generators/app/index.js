@@ -60,6 +60,7 @@ module.exports = class extends Generator {
       { source: 'core/docs/.vuepress', destination: 'docs/.vuepress' },
       { source: 'core/package.json', destination: 'package.json' },
       { source: 'core/_.gitignore', destination: '.gitignore' },
+      { source: 'core/netlify.toml', destination: 'netlify.toml' },
       { source: 'core/README.md', destination: 'README.md' }
     ];
 
