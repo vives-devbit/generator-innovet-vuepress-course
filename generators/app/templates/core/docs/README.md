@@ -1,33 +1,23 @@
 ---
 title: Home
-meta:
-  - name: description
-    content: Page description
-  - name: keywords
-    content: js vuejs vuepress
 ---
 
 # <%= projectName %>
 
 > <%= description %>
 
-<div style="font-size: 10em; text-align: center;">🎉</div>
+![Success](./assets/success.png)
 
-[[toc]]
+This is the home page of your VuePress course website.
 
-##### Check out for more Markdown Extensions [here](https://vuepress.vuejs.org/guide/markdown.html#header-anchors)
+Feel free to style it as you wish.
 
-## Article 1
+Some tips on how to start:
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-## Article 2
-
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-## Components
-
-Source at docs/.vuepress/components/
-
-* <Demo/>
-* <Button-Counter :start="0"/>
+* Refactor the `README.md` in the root of this project. It is the first page users encounter when visiting your GitHub repository.
+* Fill in this `README.md` with an introduction to your course.
+* Start a development server using `npm run docs:dev`
+* Generate pages using `yo innovet-vuepress-course:page`
+* Setup your [Netlify site](https://www.netlify.com/)
+* Commit and push your changes to GitHub on a regular base
+* Navigate to your Netlify domain url and check if the site deployed successfully.
