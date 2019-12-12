@@ -34,7 +34,7 @@ npm run docs:dev
 yo innovet-vuepress-course:page
 ```
 
-Creates a `[folder]/README.md` under docs. Overwrite the conflicts to persist the theme configurations.
+Creates a `[folder]/README.md` under `docs` and an `[folder]/assets` for your images. Overwrite the conflicts to persist the theme configurations.
 
 ## Build
 
@@ -42,30 +42,31 @@ Creates a `[folder]/README.md` under docs. Overwrite the conflicts to persist th
 npm run docs:build
 ```
 
-Build generated under `docs/.vuepress/dist`
+Build generated under the root of your project.
 
 ## File tree
 
 ```bash
-.
-├── docs
-│   ├── about
-│   │   └── README.md
-│   ├── contact
-│   │   └── README.md
-│   ├── images
-│   │   └── thumbnail-256x256.png
-│   ├── README.md
-│   └── .vuepress
-│       ├── components
-│       │   ├── Button
-│       │   │   └── Counter.vue
-│       │   └── Demo.vue
-│       ├── config.js
-|       ├── dist
-│       └── public
-│           └── favicon.ico
-└── package.json
+│   .gitignore
+│   netlify.toml
+│   package-lock.json
+│   package.json
+│   README.md
+└───docs
+    │   LICENSE.md
+    │   README.md
+    ├───.vuepress
+    │   │   config.js
+    │   ├───public
+    │   │       favicon.ico
+    │   └───styles
+    │           palette.styl
+    ├───assets
+    │       success.png
+    └───introduction
+        │   README.md
+        └───assets
+                .gitkeep
 ```
 
 ## Getting To Know Yeoman
