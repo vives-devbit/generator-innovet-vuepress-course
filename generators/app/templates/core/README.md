@@ -1,6 +1,6 @@
 # <%= projectName %>
 
-Welcome to your new VuePress course. This is the README file that will display on GitHub. Please feel free to change this information.
+Welcome to your new VuePress course. This is the README file that will display on GitHub. Please feel free to change this information. This file should reflect the content of this course.
 
 ## Development
 
